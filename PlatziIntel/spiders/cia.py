@@ -16,7 +16,7 @@ class SpiderCIA(scrapy.Spider):
     def parse_link(self, response, **kwargs):
         link = kwargs['url']
         title = response.xpath('//h1[@class="documentFirstHeading"]/text()').get()
-        paragraph = response.xpath('//div[@class="field-item even"]//p[position()>2]/text()').get()
+        paragraph = response.xpath('//div[@class="field-item even"]//p[not(@class)]/text()').get()
 
         yield {'url':link,
                'title':title,
