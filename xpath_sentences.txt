@@ -1,0 +1,3 @@
+links collections = '//a[starts-with(@href, "collection") and (parent::h3|parent::h2)]/@href'
+title = '//h1[@class="documentFirstHeading"]/text()'
+description (list) = '//div[@class="field-item even"]//p[position()>2]/text()'
